@@ -29,7 +29,6 @@ function startGame() {
         dashed.push("_");
     }
 document.getElementById("word-display").innerHTML = "<p>Guess the word: " + dashed.join(" ") + "</p>";
-    }
+}
 
-
-document.getElementById("playBtn").onclick = startGame;
+document.getElementById("playBtn").addEventListener("click", startGame);
