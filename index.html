@@ -1,38 +1,27 @@
-<!-- So for my project I am doing a guessing game where the person is guessing a word. I am going to have a list of the alphabet. So first, there is the date listed which under that the player can choose a level. Easy is a one word option, medium is three words, and hard is 5. Then you press play to start the game. There is a box that allows you to type in one letter at a time, you must press guess in order for it to run. There is also a give up button if they player wishes to use it. Once you press guess the letter you choose will be moved from Letters to guess to letters already guessed. Then if the letter is part of the word it will change one of the - that pop up when selecting a level. If you make a mistake with a letter than the number of mistakes goes up by one.-->
-
-
+<!-- So for my project I am doing a device that helps someone choose their meal throughout the day. They select whether they want breakfast, lunch, or dinner. Once they do that they press choose which allows the computer to run and select a dish from a list. The computer will show the original options from the that one list and then under that it will show the winner.-->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Word Guessing</title>
+    <title>What to Eat?</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css">
 </head>
  <body>
 
-    <h1>Guess the Word:</h1>
+    <h1>What to Eat?</h1>
 
-        <h3>Choose your level:</h3>
-        <input type="radio" name="level" id="e" value="1" checked><label for="e">Easy: 3 letter word</label><br>
-        <input type="radio" name="level" id="m" value="3"><label for="m">Medium: 5 letter word</label><br>
-        <input type="radio" name="level" id="h" value="5"><label for="h">Hard: 7 letter word</label><br><br>
-        <button id="playBtn">Play</button>
-      </div><br>
-    <br>
+        <h3>Choose which meal:</h3>
+        <input type="radio" name="level" id="e" value="1" checked><label for="e">Breakfast</label><br>
+        <input type="radio" name="level" id="m" value="3"><label for="m">Lunch</label><br>
+        <input type="radio" name="level" id="h" value="5"><label for="h">Dinner</label><br><br>
+        <button id="playBtn">Choose</button>
+      <br>
 
-    <div>
-        <label for="letter-input">Type a letter:</label>
-        <input type="text" id="letter-input" maxlength="1">
-        
-        <button type="button" id="guessBtn" >Guess</button>
-    </div>
-
-    <br>
 
     <div id="word-display">
-        <p>Guess the word:</p>
+        <p>Enjoy eating:</p>
     </div>
 </body>
 </html>

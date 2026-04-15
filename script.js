@@ -4,31 +4,44 @@ let dashed = []
 
 
 //Levels
-const easyWords = ["Dog", "Cat", "Bat", "Bus", "Age", "Pet", "Ball", "Act"];
-const mediumWords = ["Heart", "Sound", "Cabin", "Daisy", "Karma", "Nacho", "Nails", "Radio"];
-const hardWords = ["Pizzazz", "Quizzes", "Grizzly", "Puzzler", "Zombify", "Squeeze", "Quickly", "Squeaky"];
+const easyWords = ["Pancakes", "Eggs", "Benedict", "Waffles", "French Toast", "Omelet", "Breakfast Burrito", "Chilaquiles"];
+const mediumWords = ["Tacos", "Burger", "Sandwich", "Salad", "Pizza", "Nachos", "Burrito", "Gyro"];
+const hardWords = ["Sushi", "Pasta", "Steak", "Kabob", "Fish", "Roasted Chicken", "Fajitas", "Lamb Chops"];
 
 
-// ____
+// random dish
 
-function startGame() {
-    let level = document.querySelector('input[name="level"]:checked').id;  //finds which level was picked
+function startGame(chosenLevel) {
+    let selectedList = [];
 
-    if (level === "e"){
+
+
+    if (chosenLevel === "e"){
+        selectedList = easyWords;
         secretWord = easyWords[Math.floor(Math.random() * easyWords.length)];
     }
-    else if (level === "m"){
+    else if (chosenLevel === "m"){
+        selectedList = mediumWords;
         secretWord = mediumWords[Math.floor(Math.random() * mediumWords.length)];
     }
     else {
+        selectedList = hardWords;
         secretWord = hardWords[Math.floor(Math.random() * hardWords.length)];            //getting a random word from the specific list
     }
 
-    dashed = [];
-    for(let i = 0; i<secretWord.length; i++){
-        dashed.push("_");
+    dashed = []; 
+    for(let i = 0; i < selectedList.length; i++){
+        dashed.push(selectedList[i]);
     }
-document.getElementById("word-display").innerHTML = "<p>Guess the word: " + dashed.join(" ") + "</p>";
+
+    document.getElementById("word-display").innerHTML = 
+        "<p>Options were: " + dashed.join(", ") + "</p>" + 
+        "<h2>Enjoy eating: " + secretWord + "!</h2>";
+
 }
 
-document.getElementById("playBtn").addEventListener("click", startGame);
+
+document.getElementById("playBtn").addEventListener("click", function() {
+    let level = document.querySelector('input[name="level"]:checked').id;
+        startGame(level);
+});
