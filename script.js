@@ -1,18 +1,18 @@
 //Game State
 let secretWord = ""
-let dashed = []
+
 
 
 //const levels                                                                                                                             constant list never changes
 const Breakfast = ["Pancakes", "Eggs", "Benedict", "Waffles", "French Toast", "Omelet", "Breakfast Burrito", "Chilaquiles"];
 const Lunch = ["Tacos", "Burger", "Sandwich", "Salad", "Pizza", "Nachos", "Burrito", "Gyro"];
-const Dinner = ["Sushi", "Pasta", "Steak", "Kabob", "Fish", "Roasted Chicken", "Fajitas", "Lamb Chops"];
+const Dinner = ["Sushi", "Pasta", "Steak", "Kebab", "Fish", "Roasted Chicken", "Fajitas", "Lamb Chops"];
 
  
-//Levels                                                                                                                           for loop deletes variables
+//Levels                                                                                                        for loop deletes variables
 let easyWords = ["Pancakes", "Eggs", "Benedict", "Waffles", "French Toast", "Omelet", "Breakfast Burrito", "Chilaquiles"];
 let mediumWords = ["Tacos", "Burger", "Sandwich", "Salad", "Pizza", "Nachos", "Burrito", "Gyro"];
-let hardWords = ["Sushi", "Pasta", "Steak", "Kabob", "Fish", "Roasted Chicken", "Fajitas", "Lamb Chops"];
+let hardWords = ["Sushi", "Pasta", "Steak", "Kebab", "Fish", "Roasted Chicken", "Fajitas", "Lamb Chops"];
 
 
 // random dish
@@ -44,7 +44,7 @@ function startGame(chosenLevel) {
     if (easyWords.length === 0) {
         easyWords = [...Breakfast]; 
     } 
-    if (mediumWords.length === 0) {                                   // restoring the list but i had to use AI overview in google to learn about [... Name of the list]
+    if (mediumWords.length === 0) {     // restoring the list but i had to use AI overview in google to learn about [... Name of the list]
         mediumWords = [...Lunch];
     } 
     if (hardWords.length === 0) {
@@ -59,6 +59,6 @@ function startGame(chosenLevel) {
 
 
 document.getElementById("playBtn").addEventListener("click", function() {
-    let level = document.querySelector('input[name="level"]:checked').id;                                    //making the choose button work when clicked
+    let level = document.querySelector('input[name="level"]:checked').id;               //making the choose button work when clicked
         startGame(level);
 });
