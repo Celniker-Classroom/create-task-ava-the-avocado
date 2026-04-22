@@ -62,7 +62,7 @@ document.getElementById("favBtn").addEventListener("click", function(){
         updateFavorites();
     }
 });
-
+// 
 
 
 
