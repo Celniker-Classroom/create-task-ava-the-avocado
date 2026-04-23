@@ -1,1 +1,105 @@
-/* Add Global styles here */
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: #ffd5ed;
+    margin: 0;
+    padding: 40px 20px;
+    color: #5b5470;
+    text-align: center;
+}
+
+.page {
+    max-width: 700px;
+    margin: auto;
+}
+
+h1 {
+    color: #ee8e96;
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 40px;
+    letter-spacing: -1.5px;
+    text-shadow: 0 10px 20px rgba(123, 111, 166, 0.15);
+}
+
+.bubble {
+    background: #ffffff;
+    border: 1px solid rgba(255, 221, 248, 0.6);
+    border-radius: 30px; 
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    margin-bottom: 25px;
+}
+
+
+.bubble:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(123, 111, 166, 0.1);
+}
+
+h3 {
+    margin-top: 0;
+    color: #ca7f98;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+button {
+    background: #eaaeae;
+    color: white;
+    border: none;
+    border-radius: 50px; 
+    padding: 14px 32px;
+    margin: 15px 0;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 15px rgba(234, 174, 174, 0.4);
+}
+
+button:hover {
+    background: #dd96b4;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(234, 174, 174, 0.6);
+}
+
+button:active {
+    transform: scale(0.98); 
+}
+
+input[type="radio"] {
+    margin: 12px;
+    accent-color: #eaaeea;
+    transform: scale(1.2);
+}
+
+label {
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+label:hover {
+    color: #a66f84;
+}
+
+li {
+    background: #fffcfc;
+    margin: 10px auto;
+    padding: 12px;
+    border-radius: 15px;
+    border: 1px dashed #ffdde8; 
+    width: 85%;
+    font-weight: 600;
+    color: #a66f8f;
+}
+
+#word-display h2 {
+    color: #a66f8b;
+    font-size: 28px;
+    margin: 10px 0;
+}

@@ -8,24 +8,27 @@
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css">
 </head>
- <body>
+<body>
+    <div class="page">
+        <h1>What to Eat?</h1>
+        
+        <div class="bubble">
+            <h3>Choose which meal:</h3>
+            <input type="radio" name="level" id="e" value="1" checked><label for="e">Breakfast</label><br>
+            <input type="radio" name="level" id="m" value="3"><label for="m">Lunch</label><br>
+            <input type="radio" name="level" id="h" value="5"><label for="h">Dinner</label><br>
+            <button id="playBtn">Choose</button>
+        </div>
 
-    <h1>What to Eat?</h1>
+        <div id="word-display" class="bubble">
+            <h2>Enjoy eating:</h2>
+        </div>
 
-        <h3>Choose which meal:</h3>
-        <input type="radio" name="level" id="e" value="1" checked><label for="e">Breakfast</label><br>
-        <input type="radio" name="level" id="m" value="3"><label for="m">Lunch</label><br>
-        <input type="radio" name="level" id="h" value="5"><label for="h">Dinner</label><br><br>
-        <button id="playBtn">Choose</button>
-      <br>
-
-
-    <div id="word-display">
-        <h2>Enjoy eating:</h2>
+        <div class="bubble">
+            <button id="favBtn">Add to Favorites</button>
+            <h3>Favorites:</h3>
+            <ul id="favorites-list"></ul>
+        </div>
     </div>
-
-    <button id ="favBtn">Add to Favorites</button>
-        <h3> Favorites:</h3>
-        <ul id = "favorites-list"></ul>
+    <div id="confetti-container"></div>
 </body>
-</html>
